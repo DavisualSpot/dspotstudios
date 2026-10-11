@@ -13,10 +13,10 @@
 <script>
   // Paste each Lemon Squeezy checkout link here (Product → Share → Checkout link).
   const CHECKOUT = {
-    GH: '',
-    UI: '',
-    AA: '',
-    BUNDLE: ''
+    GH: 'https://dspotstudios.lemonsqueezy.com/checkout/buy/af91f4f1-2c6a-49b0-846b-ca0310382749',
+    UI: 'https://dspotstudios.lemonsqueezy.com/checkout/buy/8472d9d0-6082-4e87-bd1d-9d293200d121',
+    AA: 'https://dspotstudios.lemonsqueezy.com/checkout/buy/bf5b938e-7f3c-47e6-9c95-6bfefe520d99',
+    BUNDLE: 'https://dspotstudios.lemonsqueezy.com/checkout/buy/69e6e9d9-39c2-44b5-a632-adcbfbbae474'
   };
   const CONTACT = 'dspotlab@gmail.com';
 </script>
@@ -54,7 +54,7 @@
   .chips { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:30px }
   .chips span { box-shadow:inset 0 0 0 1.5px currentColor; border-radius:999px; padding:5px 13px; font-size:13px; font-weight:500; opacity:.88 }
   .buy { display:flex; align-items:center; gap:20px; flex-wrap:wrap }
-  .price { font:600 40px var(--serif) }
+  .price { font:600 40px var(--serif) } .usd { font-size:14px; opacity:.7; margin-left:-10px }
   .player { border-radius:20px; padding:10px; background:rgba(255,255,255,.07); box-shadow:inset 0 0 0 1px rgba(127,127,127,.25) }
   .track { display:flex; align-items:center; gap:14px; width:100%; background:none; border:0; color:inherit; font:inherit; text-align:left;
            padding:12px; border-radius:12px; cursor:pointer }
@@ -94,7 +94,7 @@
 <div class="wrap">
   <nav>
     <a class="brand" href="#"><i style="width:16px;height:16px;border-radius:50%;background:var(--red);display:inline-block;flex:none"></i><span style="text-transform:none;letter-spacing:0;font-weight:700;font-size:1.25em">DSpot Studios</span></a>
-    <a class="btn" href="#bundle">Get all three · $35</a>
+    <a class="btn" href="#bundle">Get all three · ₦44,999</a>
   </nav>
   <header class="hero">
     <h1>Royalty-free sounds, <em>made from maths.</em></h1>
@@ -111,7 +111,7 @@
   <div class="wrap">
     <h2>All three packs.<br><em>One price.</em></h2>
     <p>Gold Hour, Interface and Afro Accents together: 316 sounds for one payment.</p>
-    <a class="btn" data-buy="BUNDLE">Get the bundle · $35</a>
+    <a class="btn" data-buy="BUNDLE">Get the bundle · ₦44,999</a>
     <span class="save" id="save"></span>
     <img src="BUNDLE.png" alt="The three Sound Lab packs: Gold Hour, Interface and Afro Accents" loading="lazy">
   </div>
@@ -135,8 +135,8 @@
 </div>
 
 <script>
-const PACKS = [{"code": "GH", "name": "Gold Hour", "tagline": "Luxury transitions, chimes and logo stingers", "blurb": "Warm, airy, premium. Made for real estate, hospitality, beauty, fashion and finance brands: soft whooshes instead of booms, gold-dust shimmers, warm bells, and logo stingers in all 12 keys.", "count": 128, "stats": ["128 sounds", "WAV \u00b7 48 kHz \u00b7 24-bit", "Tonal sounds in all 12 keys", "Royalty-free"], "price": 19, "featured": ["GH_Stinger_Reveal_E", "GH_Stinger_Glint_E", "GH_Whoosh_Medium_01", "GH_Shimmer_Rise_01"], "bg": "#1E1712", "fg": "#F4EBDD", "accent": "#E0A84A", "num": "01"}, {"code": "UI", "name": "Interface", "tagline": "Clicks, pops, notifications and digital textures", "blurb": "Clean interface sounds for app demos, product videos, explainers and motion graphics: clicks, toggles, swipes, typing, counters, glitches, and notification chimes in all 12 keys.", "count": 88, "stats": ["88 sounds", "WAV \u00b7 48 kHz \u00b7 24-bit", "Tonal sounds in all 12 keys", "Royalty-free"], "price": 12, "featured": ["UI_Success_C", "UI_Counter_Roll_Ding", "UI_Swipe_Right", "UI_Glitch_02"], "bg": "#ECEDEF", "fg": "#14161A", "accent": "#3355FF", "num": "02"}, {"code": "AA", "name": "Afro Accents", "tagline": "Talking drum, kalimba, log drum and groove loops", "blurb": "West African and South African flavour for intros, transitions and brand videos: talking-drum hits and bends, djembe, shekere, agogo, kalimba runs and amapiano-style log drums in all 12 keys, plus seamless groove loops.", "count": 100, "stats": ["100 sounds", "WAV \u00b7 48 kHz \u00b7 24-bit", "Tonal sounds in all 12 keys", "6 seamless loops", "Royalty-free"], "price": 17, "featured": ["AA_Afro_Groove_100BPM", "AA_Amapiano_Groove_Am_112BPM", "AA_Talking_Drum_Rise", "AA_Kalimba_Run_Up_E"], "bg": "#B8461F", "fg": "#FFF4E6", "accent": "#1A1410", "num": "03"}];
-const BUNDLE_PRICE = 35;
+const PACKS = [{"code": "GH", "name": "Gold Hour", "tagline": "Luxury transitions, chimes and logo stingers", "blurb": "Warm, airy, premium. Made for real estate, hospitality, beauty, fashion and finance brands: soft whooshes instead of booms, gold-dust shimmers, warm bells, and logo stingers in all 12 keys.", "count": 128, "stats": ["128 sounds", "WAV \u00b7 48 kHz \u00b7 24-bit", "Tonal sounds in all 12 keys", "Royalty-free"], "price": 24999, "usd": 19, "featured": ["GH_Stinger_Reveal_E", "GH_Stinger_Glint_E", "GH_Whoosh_Medium_01", "GH_Shimmer_Rise_01"], "bg": "#1E1712", "fg": "#F4EBDD", "accent": "#E0A84A", "num": "01"}, {"code": "UI", "name": "Interface", "tagline": "Clicks, pops, notifications and digital textures", "blurb": "Clean interface sounds for app demos, product videos, explainers and motion graphics: clicks, toggles, swipes, typing, counters, glitches, and notification chimes in all 12 keys.", "count": 88, "stats": ["88 sounds", "WAV \u00b7 48 kHz \u00b7 24-bit", "Tonal sounds in all 12 keys", "Royalty-free"], "price": 14999, "usd": 12, "featured": ["UI_Success_C", "UI_Counter_Roll_Ding", "UI_Swipe_Right", "UI_Glitch_02"], "bg": "#ECEDEF", "fg": "#14161A", "accent": "#3355FF", "num": "02"}, {"code": "AA", "name": "Afro Accents", "tagline": "Talking drum, kalimba, log drum and groove loops", "blurb": "West African and South African flavour for intros, transitions and brand videos: talking-drum hits and bends, djembe, shekere, agogo, kalimba runs and amapiano-style log drums in all 12 keys, plus seamless groove loops.", "count": 100, "stats": ["100 sounds", "WAV \u00b7 48 kHz \u00b7 24-bit", "Tonal sounds in all 12 keys", "6 seamless loops", "Royalty-free"], "price": 21999, "usd": 17, "featured": ["AA_Afro_Groove_100BPM", "AA_Amapiano_Groove_Am_112BPM", "AA_Talking_Drum_Rise", "AA_Kalimba_Run_Up_E"], "bg": "#B8461F", "fg": "#FFF4E6", "accent": "#1A1410", "num": "03"}];
+const BUNDLE_PRICE = 44999;
 const PLAY = '<svg viewBox="0 0 14 14"><path d="M3 1.5v11l9-5.5z" fill="currentColor"/></svg>';
 const PAUSE = '<svg viewBox="0 0 14 14"><path d="M3 1.5h3v11H3zM8 1.5h3v11H8z" fill="currentColor"/></svg>';
 const label = s => s.replace(/^[A-Z]{2}_/, '').replace(/_/g, ' ').replace(/ ([A-G]#?)$/, ' in $1').replace(/ (\d+)BPM/, ' · $1 BPM');
@@ -150,7 +150,7 @@ document.getElementById('packs').innerHTML = PACKS.map(p => `
         <p class="tag">${p.tagline}</p>
         <p class="blurb">${p.blurb}</p>
         <div class="chips">${p.stats.map(s => `<span>${s}</span>`).join('')}</div>
-        <div class="buy"><span class="price">$${p.price}</span><a class="btn" style="background:${p.fg};color:${p.bg}" data-buy="${p.code}">Buy ${p.name}</a></div>
+        <div class="buy"><span class="price">₦${p.price.toLocaleString('en-US')}</span><span class="usd">about $${p.usd}</span><a class="btn" style="background:${p.fg};color:${p.bg}" data-buy="${p.code}">Buy ${p.name}</a></div>
       </div>
       <div class="player">
         <button class="track main" data-src="audio/${p.code}_preview.mp3"><span class="ic">${PLAY}</span>
@@ -183,7 +183,8 @@ document.querySelectorAll('[data-buy]').forEach(a => {
 });
 document.querySelectorAll('.mail').forEach(a => { a.href = 'mailto:' + CONTACT; a.textContent = CONTACT; });
 const single = PACKS.reduce((s, p) => s + p.price, 0);
-document.getElementById('save').textContent = `$${single} if bought separately. You save $${single - BUNDLE_PRICE}.`;
+const ng = n => '₦' + n.toLocaleString('en-US');
+document.getElementById('save').textContent = `About $35. ${ng(single)} if bought separately, so you save ${ng(single - BUNDLE_PRICE)}. Prices are in naira; your bank converts them.`;
 </script>
 </body>
 </html>
